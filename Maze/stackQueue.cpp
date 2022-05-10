@@ -9,24 +9,6 @@ using namespace std;
 void stackOrQueue::printValues(cmdLine& obj) {
 	if (obj.getList() == true) {
 		cout << "Path taken:" << "\n";
-	/*	uint32_t usize = static_cast<uint32_t>(coordinates.size());
-		uint32_t count = 0;
-		for (uint32_t i = usize -1; i != 0; i -= 3)
-		{
-			if (count == usize / 3) {
-				break;
-			}
-		
-			uint32_t room = coordinates[i - 2];
-			uint32_t row = coordinates[i  -1];
-			uint32_t column = coordinates[i];
-
-			cout << "(" << room << "," << row << "," << column << ",";
-			cout << threeD[room][row][column].value << ")" << "\n";
-			count++;
-
-		}*/
-		
 		while(!coords.empty()){
 			Location loc = coords.top();
 			coords.pop();
@@ -304,11 +286,6 @@ void stackOrQueue::stackQueues(cmdLine& obj) {
 			loc = d1.front();
 			d1.pop_front();
 		}
-		//if (loc.room == 0 && loc.row == 2 && loc.column == 1) {
-		//	cout << "TRUE" << '\n';
-		//}
-		//cout << "room " << loc.room << " " << " row " << loc.row << " " << " column " << loc.column << "\n";
-
 
 		if (isdigit(threeD[loc.room][loc.row][loc.column].value) /*&& !threeD[loc.room][loc.row][loc.column].visited*/) {
 			uint32_t newRoom = static_cast<uint32_t>(threeD[loc.room][loc.row][loc.column].value - '0');
@@ -317,7 +294,6 @@ void stackOrQueue::stackQueues(cmdLine& obj) {
 			//newRoom is equal to 1, integer
 			if (newRoom > numOfRooms - 1) {
 				threeD[loc.room][loc.row][loc.column].visited = true;
-				//nothing happens -- skip rest of this if statement
 			}
 			else if (threeD[newRoom][loc.row][loc.column].value != '!' && threeD[newRoom][loc.row][loc.column].value != '#'
 				&& !threeD[newRoom][loc.row][loc.column].visited) {//if no wall, no enemy, and not visited
@@ -528,11 +504,7 @@ void stackOrQueue::backtracing(Location& loc) {
 	bool foundPath = false;
 	//threeD[loc.room][loc.row][loc.column].direction = finalDirection;
 	while (!foundPath) {
-		//if (loc.room == 0 && loc.row == 1 && loc.column == 1) {
-		//	cout << "TRUE" << '\n';//DIRECTION IS SOUTH WHEN IT SHOULD BE NORTH
-		//}
-		//cout << "room " << loc.room << " " << " row " << loc.row << " " << " column " << loc.column << "\n";
-
+	
 		if (threeD[loc.room][loc.row][loc.column].direction == 'p') {//ISSUE!
 			uint32_t newRoom = threeD[loc.room][loc.row][loc.column].prevRoom;//setting previous room of tile to newRoom
 
