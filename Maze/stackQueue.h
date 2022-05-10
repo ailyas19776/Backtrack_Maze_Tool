@@ -1,4 +1,3 @@
-//B99292359FFD910ED13A7E6C7F9705B8742F0D79
 #pragma once
 #ifndef stackQueue
 #define stackQueue
@@ -7,11 +6,7 @@
 #include <stack>
 #include <string>
 #include <vector>
-<<<<<<< HEAD
 #include "getopt.h""
-=======
-#include "getopt.h"
->>>>>>> origin/main
 #include <deque>
 using namespace std;
 
@@ -40,17 +35,11 @@ public:
     }*/
     void printHelp(char* argv[]) {
         cout << "Usage: " << argv[0] << " [-m queue|stack]|-h" << endl;
-        cout << "This program is to help you learn command-line processing," << endl;
-        cout << "reading data into a vector, the difference between stack and queue," << endl;
-        cout << "and how to properly read until end-of-file." << endl;
     } // printHelp()
 
 
     //optarg => 
     void getMode(int argc, char* argv[]) {//function is void
-//        bool modeSpecified = false;
-        // These are used with getopt_long()
-
         opterr = false; // Let us handle all error output for command line options
         int choice;
         int option_index = 0;
@@ -161,20 +150,13 @@ private:
     uint32_t endColumn;
     uint32_t endRoom;
     vector <vector<vector<Tile>>> threeD;//multiple tables
-    ///   room/row/column
-    //threeD[1][2][3].a;
     deque<Location> d1;
-    //uint currentRoomforstackQueues;
-    //breadth first search?///<--not doing this, right?
-    //deque, will do the breadth first search because it can do back and front insertion/pop
     bool foundPath;
     cmdLine cmdLineObj;
 public:
     stackOrQueue():  numTilesDiscovered(0), startRow(0),startColumn(0), 
         startRoom(0), n(0), numOfRooms(0), endRow(0), 
     endColumn(0), endRoom(0), foundPath(false),cmdLineObj(){}
-    //bool backTracing(Location&);
-    //void list();
     void readInL();
     void readInM();
     bool setValues(char o);
