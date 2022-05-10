@@ -10,16 +10,12 @@ using namespace std;
 int main(int argc, char *argv[] ) {
     ios_base::sync_with_stdio(false);
     stackOrQueue obj{};
-/*    argc = 0;
-    argv = 0*/;
-    //string mode;
-    //indices in array [3-d vector], if index has '#', do not go, if it has, '.', go!
+
     cmdLine cmds{};
     string typeOfMode = "0";
 
     
-     cmds.getMode(argc, argv);
-    //mode = cmds.getModeVal();// goes with this function where mode is referring to 
+    cmds.getMode(argc, argv);
     cin >> typeOfMode;
 
      if (typeOfMode == "M") {
@@ -31,18 +27,6 @@ int main(int argc, char *argv[] ) {
      else {
          obj.readInM();
      }
-
-
-
-     //if (cmds.getMap() == true) {
-     //    obj.readInM();
-     //}
-     //else if (cmds.getList()== true){
-     //    obj.readInL();
-     //}
-     //else {
-     //    obj.readInM();
-     //}
 
      if (cmds.getStack() == true) {//stack method for spec-M.txt
          obj.stackQueues(cmds);
