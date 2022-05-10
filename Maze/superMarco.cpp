@@ -60,6 +60,4 @@ int main(int argc, char *argv[] ) {
      return 0;
 }
 
-// could not run  leak-checking..?// check//Because it exited program
-// output the castle room 0 comment?//will not need it ---check
-// how  does the stack and queue work?//check// --stack goes from bottom --queue goes from front
+
