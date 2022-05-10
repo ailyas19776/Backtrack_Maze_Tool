@@ -1,7 +1,7 @@
 L
 2
 2
-//sample L mode input file, two 2x2 rooms
+//sample L mode input file, (2) 2x2 rooms
 //castle room 0
 S.
 ..
