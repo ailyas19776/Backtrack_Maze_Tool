@@ -1,0 +1,24 @@
+M
+4
+4
+//sample M mode input file, four 4x4 rooms
+//castle room 0
+.1##
+#S#.
+####
+....
+//castle room 1
+.2..
+...
+2..3
+####
+//castle room 2
+!##!
+!.!#
+#.#!
+...#
+//castle room 3
+C!..
+....
+..!!
+..!3

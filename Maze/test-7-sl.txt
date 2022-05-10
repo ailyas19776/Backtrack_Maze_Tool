@@ -1,0 +1,7 @@
+L
+1
+9
+//sample L mode input file, one 9x9 rooms
+//castle room 0
+(0,0,0,S)
+(0,9,9,1)
