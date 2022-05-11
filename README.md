@@ -5,11 +5,11 @@ ________________________________________________________________________________
 
 Command Line Options:
 
--s  --stack
+-s    --stack
 
--q  --queue
+-q    --queue
 
--o [arg] --output [arg] [M/L]  (Map format/List format)
+-o [arg]  --output [arg] [M/L]  (Map format/List format)
 
 _______________________________________________________________________________
 
