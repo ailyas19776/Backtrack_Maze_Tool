@@ -3,7 +3,7 @@
 Begin by cd inside of the directory "Maze" and typing "source make.sh" to compile the files
 ________________________________________________________________________________
 
-Command Line Options:
+# Command Line Options:
 
 -s    --stack
 
@@ -14,7 +14,7 @@ Command Line Options:
 _______________________________________________________________________________
 
 
-Example Commands:
+# Example Commands:
 
 ./maze --stack --output L < created_maze_file.txt
 
@@ -41,7 +41,7 @@ Key for creating maze_files:
 _______________________________________________________________________________
 
 
-Example maze_file text inputs L:
+# Example maze_file text inputs L (FOLLOW THIS FORMAT):
 
 L (List vs Map)
 
@@ -75,7 +75,7 @@ L (List vs Map)
 
 
 
-Example maze_file texts M:
+# Example maze_file texts M (FOLLOW THIS FORMAT):
 
 M (Map vs List)
 
