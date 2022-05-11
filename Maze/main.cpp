@@ -28,14 +28,14 @@ int main(int argc, char *argv[] ) {
          obj.readInM();
      }
 
-     if (cmds.getStack() == true) {//stack method for spec-M.txt
+     if (cmds.getStack() == true) {
          obj.stackQueues(cmds);
      }
      else if (cmds.getQueue() == true) {
          obj.stackQueues(cmds);
      }
      else {
-         cout << "You must specify a stack or a queue" << "\n";
+         cout << "Please indicate either a Stack or a Queue search" << "\n";
          return 0;
      }
 
