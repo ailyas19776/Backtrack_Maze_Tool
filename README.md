@@ -1,6 +1,6 @@
 # Maze_Game
 
-Begin by cd inside of the directory "Maze" and typing "make" to compile the files
+Begin by cd inside of the directory "Maze" and typing "source make.sh" to compile the files
 ________________________________________________________________________________
 
 Command Line Options:
