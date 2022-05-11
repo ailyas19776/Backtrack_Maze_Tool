@@ -16,9 +16,9 @@ _______________________________________________________________________________
 
 Example Commands:
 
-./supermarco --stack --output L < maze_file.txt
+./maze --stack --output L < maze_file.txt
 
-./supermarco --queue --output M < maze_file2.txt
+./maze --queue --output M < maze_file2.txt
 
 _______________________________________________________________________________
 
