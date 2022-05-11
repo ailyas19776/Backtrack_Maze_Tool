@@ -1,54 +1,8 @@
-## EECS 281 Advanced Makefile
-
-# How to use this Makefile...
-###################
-###################
-##               ##
-##  $ make help  ##
-##               ##
-###################
-###################
-
-# IMPORTANT NOTES:
-#   1. Set EXECUTABLE to the command name from the project specification.
-#   2. To enable automatic creation of unit test rules, your program logic
-#      (where main() is) should be in a file named project*.cpp or
-#      specified in the PROJECTFILE variable.
-#   3. Files you want to include in your final submission cannot match the
-#      test*.cpp pattern.
-
-#######################
-# TODO (begin) #
-#######################
-# Change 'youruniqname' to match your UM uniqname (no quote marks).
-UNIQNAME    = ailyas
-
-# Change the right hand side of the identifier to match the project identifier
-# given in the project or lab specification.
-IDENTIFIER  = B99292359FFD910ED13A7E6C7F9705B8742F0D79
-
-# Change 'executable' to match the command name given in the project spec.
-EXECUTABLE  = superMarco
+EXECUTABLE  = main
 
 # The following line looks for a project's main() in files named project*.cpp,
 # executable.cpp (substituted from EXECUTABLE above), or main.cpp
 PROJECTFILE = $(or $(wildcard project*.cpp $(EXECUTABLE).cpp), main.cpp)
-# If main() is in another file delete line above, edit and uncomment below
-#PROJECTFILE = mymainfile.cpp
-#######################
-# TODO (end) #
-#######################
-
-# enables c++17 on CAEN or 281 autograder
-PATH := /usr/um/gcc-6.2.0/bin:$(PATH)
-LD_LIBRARY_PATH := /usr/um/gcc-6.2.0/lib64
-LD_RUN_PATH := /usr/um/gcc-6.2.0/lib64
-
-# This is the path from the CAEN home folder to where projects will be
-# uploaded. (eg. /home/mmdarden/eecs281/project1)
-# Change this if you prefer a different path.
-# REMOTE_PATH := eecs281_$(EXECUTABLE)_sync  # /home/mmdarden/eecs281_proj0_sync
-REMOTE_PATH := eecs281_$(EXECUTABLE)_sync
 
 # designate which compiler to use
 CXX         = g++
@@ -267,35 +221,6 @@ export MAKEFILE_HELP
 help:
 	@echo "$$MAKEFILE_HELP"
 
-#######################
-# TODO (begin) #
-#######################
-# individual dependencies for objects
-# Examples:
-# "Add a header file dependency"
-# project2.o: project2.cpp project2.h
-#
-# "Add multiple headers and a separate class"
-# HEADERS = some.h special.h header.h files.h
-# myclass.o: myclass.cpp myclass.h $(HEADERS)
-# project5.o: project5.cpp myclass.o $(HEADERS)
-#
-# SOME EXAMPLES
-#
-#test_thing: test_thing.cpp class.o functions.o
-#class.o: class.cpp class.h
-#functions.o: functions.cpp functions.h
-#project0.o: project0.cpp class.h functions.h
-#
-# THE COMPILER CAN GENERATE DEPENDENCIES FROM SOURCE CODE
-#
-# % g++ -std=c++1z -MM *.cpp
-#
-# ADD YOUR OWN DEPENDENCIES HERE
-
-######################
-# TODO (end) #
-######################
 
 # these targets do not create any files
 .PHONY: all release debug profile gprof static clean alltests
