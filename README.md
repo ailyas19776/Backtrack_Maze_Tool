@@ -1,4 +1,4 @@
-# Maze_Game
+# Backtracking Maze Tool
 
 Begin by cd inside of the directory "Maze" and typing "source make.sh" to compile the files
 ________________________________________________________________________________
