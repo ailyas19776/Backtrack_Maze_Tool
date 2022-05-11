@@ -16,14 +16,14 @@ _______________________________________________________________________________
 
 Example Commands:
 
-./maze --stack --output L < maze_file.txt
+./maze --stack --output L < created_maze_file.txt
 
-./maze --queue --output M < maze_file2.txt
+./maze --queue --output M < created_maze_file2.txt
 
 _______________________________________________________________________________
 
 
-Key for maze_files:
+Key for creating maze_files:
 
 '.' = empty (can walk on)
 
@@ -41,7 +41,7 @@ Key for maze_files:
 _______________________________________________________________________________
 
 
-Example maze_file texts L:
+Example maze_file text inputs L:
 
 L (List vs Map)
 
